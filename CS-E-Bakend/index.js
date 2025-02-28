@@ -17,10 +17,8 @@ app.use(express.urlencoded({ limit: "10mb", extended: true }));
 
 app.use(
   cors({
-    origin: process.env.FRONTEND_URL, // ✅ Ensure FRONTEND_URL is correctly set in Render environment variables
-    credentials: true, // ✅ Allows cookies to be sent
-    methods: ["GET", "POST", "PUT", "DELETE"],
-    allowedHeaders: ["Content-Type", "Authorization"],
+    origin: "https://ecommerceapp-u8w2.onrender.com",
+    credentials: true,
   })
 );
 app.use(express.json());
